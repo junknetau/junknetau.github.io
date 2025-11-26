@@ -4,7 +4,7 @@ icon: lucide/wrench
 
 You need to ensure the `garage` user has proper ownership and permissions for both data directories. Here's the corrected setup:
 
-## 1. Create Dedicated User and Directories
+## Create Dedicated User and Directories
 
 ```bash
 # Create dedicated user for Garage
@@ -26,7 +26,7 @@ sudo chmod 750 /var/lib/garage/data
 sudo chmod 750 /var/log/garage
 ```
 
-## 2. Verify Directory Structure
+## Verify Directory Structure
 
 ```bash
 # Check the directory structure and permissions
@@ -41,7 +41,7 @@ drwxr-x--- 2 garage garage 4096 Dec 1 12:00 data
 drwxr-x--- 2 garage garage 4096 Dec 1 12:00 meta
 ```
 
-## 3. Install Garage Binary
+## Install Garage Binary
 
 ```bash
 # Copy garage binary to standard location
@@ -50,7 +50,7 @@ sudo chown root:root /usr/local/bin/garage
 sudo chmod 755 /usr/local/bin/garage
 ```
 
-## 4. Set Permissions for Config File
+## Set Permissions for Config File
 
 ```bash
 # Ensure garage user can read the config file
@@ -58,7 +58,7 @@ sudo chown root:garage /etc/garage.toml
 sudo chmod 640 /etc/garage.toml
 ```
 
-## 5. Create Systemd Service File
+## Create Systemd Service File
 
 Create the service file with proper directory access:
 
@@ -107,7 +107,7 @@ SyslogIdentifier=garage
 WantedBy=multi-user.target
 ```
 
-## 6. Alternative: More Permissive Directory Access
+## Alternative: More Permissive Directory Access
 
 If Garage needs to create additional directories, you can use:
 
@@ -123,7 +123,7 @@ ReadOnlyPaths=/etc/garage.toml
 # ReadWritePaths=/var/lib/garage/meta /var/lib/garage/data /var/log/garage
 ```
 
-## 7. Verify Your Config File
+## Verify Your Config File
 
 Make sure your `/etc/garage.toml` points to the correct directories:
 
@@ -146,7 +146,7 @@ bind_addr = "[::]:3902"
 root_domain = ".web.garage"
 ```
 
-## 8. Enable and Start the Service
+## Enable and Start the Service
 
 ```bash
 # Reload systemd to recognize the new service
@@ -165,7 +165,7 @@ sudo systemctl status garage.service
 sudo journalctl -u garage.service -f
 ```
 
-## 9. Verify Directory Access
+## Verify Directory Access
 
 After starting the service, check if Garage can access the directories:
 
@@ -181,7 +181,7 @@ sudo ls -la /var/lib/garage/meta/ | head -10
 sudo -u garage /usr/local/bin/garage status
 ```
 
-## 10. Troubleshooting Permission Issues
+## Troubleshooting Permission Issues
 
 If you encounter permission issues:
 
