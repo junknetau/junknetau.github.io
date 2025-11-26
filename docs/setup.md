@@ -2,6 +2,8 @@
 icon: lucide/wrench
 ---
 
+# Run as Linux service
+
 You need to ensure the `garage` user has proper ownership and permissions for both data directories. Here's the corrected setup:
 
 ## Create Dedicated User and Directories
