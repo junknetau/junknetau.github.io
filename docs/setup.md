@@ -1,3 +1,7 @@
+---
+icon: lucide/wrench
+---
+
 You need to ensure the `garage` user has proper ownership and permissions for both data directories. Here's the corrected setup:
 
 ## 1. Create Dedicated User and Directories
