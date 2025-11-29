@@ -4,7 +4,14 @@ icon: lucide/wrench
 
 # Run as Linux service
 
-You need to ensure the `garage` user has proper ownership and permissions for both data directories. Here's the corrected setup:
+## Download Garage
+
+Go to [Garage Downloads](https://garagehq.deuxfleurs.fr/download/) and find the latest version for your architecture.
+
+```bash
+## The following is the latest stable release
+curl -O https://garagehq.deuxfleurs.fr/_releases/v2.1.0/x86_64-unknown-linux-musl/garage
+```
 
 ## Create Dedicated User and Directories
 

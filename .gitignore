@@ -27,3 +27,4 @@ trace.json
 
 # Temporary files
 tmp
+.cache
