@@ -9,8 +9,45 @@ icon: lucide/wrench
 Go to [Garage Downloads](https://garagehq.deuxfleurs.fr/download/) and find the latest version for your architecture.
 
 ```bash
-## The following is the latest stable release
+# The following is the latest v2.1.0 stable release
 curl -O https://garagehq.deuxfleurs.fr/_releases/v2.1.0/x86_64-unknown-linux-musl/garage
+```
+
+## Create a Garage configuration file
+
+```bash
+cat > garage.toml <<EOF
+metadata_dir = "/var/lib/garage/meta"
+data_dir = "/var/lib/garage/data"
+db_engine = "sqlite"
+
+replication_factor = 1
+
+rpc_bind_addr = "[::]:3901"
+rpc_public_addr = "127.0.0.1:3901"
+rpc_secret = "$(openssl rand -hex 32)"
+
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+root_domain = ".s3.garage.localhost"
+
+[s3_web]
+bind_addr = "[::]:3902"
+root_domain = ".web.garage.localhost"
+index = "index.html"
+
+[k2v_api]
+api_bind_addr = "[::]:3904"
+
+[admin]
+api_bind_addr = "[::]:3903"
+admin_token = "$(openssl rand -base64 32)"
+metrics_token = "$(openssl rand -base64 32)"
+EOF
+
+# Move the file to the correct directory
+sudo mv garage.toml /etc/garage.toml
 ```
 
 ## Create Dedicated User and Directories
@@ -53,8 +90,8 @@ drwxr-x--- 2 garage garage 4096 Dec 1 12:00 meta
 ## Install Garage Binary
 
 ```bash
-# Copy garage binary to standard location
-sudo cp garage /usr/local/bin/
+# Move garage binary to standard location
+sudo mv garage /usr/local/bin/
 sudo chown root:root /usr/local/bin/garage
 sudo chmod 755 /usr/local/bin/garage
 ```
@@ -72,7 +109,7 @@ sudo chmod 640 /etc/garage.toml
 Create the service file with proper directory access:
 
 ```bash
-sudo nano /etc/systemd/system/garage.service
+sudo vi /etc/systemd/system/garage.service
 ```
 
 **Content:**
