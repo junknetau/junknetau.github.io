@@ -20,6 +20,12 @@
   text-align: center;
 }
 
+.jn-hero .jn-hero-logo {
+  display: block;
+  margin: 0 auto 1.2rem;
+  filter: drop-shadow(0 6px 18px rgba(233, 30, 140, 0.25));
+}
+
 .jn-hero .jn-kicker {
   display: inline-block;
   margin-bottom: 0.6rem;

@@ -11,6 +11,8 @@ hide:
 
 <div class="jn-hero" markdown>
 
+<img class="jn-hero-logo" src="images/logo.svg" alt="Junk Net — a cloud on tank treads" width="132" height="132">
+
 <span class="jn-kicker">Starting in Brisbane · In development</span>
 
 # Old laptops don't die.<br>They join the *Junk Net*.

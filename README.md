@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/logo.svg" width="112" alt="Junk Net — a cloud on tank treads">
+</p>
+
 # Junk Net
 
 > Old laptops don't die. They join the Junk Net.
