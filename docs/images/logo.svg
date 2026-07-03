@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Junk Net — a cloud on tank treads">
+  <g fill="#e91e8c">
+    <circle cx="22" cy="27" r="9"/>
+    <circle cx="33" cy="21" r="11"/>
+    <circle cx="43" cy="27" r="9"/>
+    <rect x="22" y="25" width="21" height="11"/>
+  </g>
+  <path fill="#00bfa5" fill-rule="evenodd" d="M15.5 41 H48.5 A5.5 5.5 0 0 1 48.5 52 H15.5 A5.5 5.5 0 0 1 15.5 41 Z M22.5 46.5 A2.5 2.5 0 1 0 17.5 46.5 A2.5 2.5 0 1 0 22.5 46.5 Z M34.5 46.5 A2.5 2.5 0 1 0 29.5 46.5 A2.5 2.5 0 1 0 34.5 46.5 Z M46.5 46.5 A2.5 2.5 0 1 0 41.5 46.5 A2.5 2.5 0 1 0 46.5 46.5 Z"/>
+</svg>
