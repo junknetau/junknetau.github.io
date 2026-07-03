@@ -1,166 +1,148 @@
 ---
-icon: lucide/rocket
+title: Junk Net — the community cloud built from junk
+description: >
+  Junk Net turns donated old laptops into a free, community-owned,
+  S3-compatible object store. Donate a machine, get storage.
+  Starting in Brisbane, Australia.
+hide:
+  - navigation
+  - toc
 ---
 
-# Get started
+<div class="jn-hero" markdown>
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+<span class="jn-kicker">Starting in Brisbane · In development</span>
 
-## Commands
+# Old laptops don't die.<br>They join the *Junk Net*.
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+<p class="jn-tagline">
+Junk Net turns the laptops gathering dust in your drawer into a
+free, community-owned cloud. Every donated machine becomes a storage
+node in a mesh network. Donate a laptop, get free object storage.
+No subscriptions. No lock-in. Just junk, working together.
+</p>
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+[Donate a laptop](contribute/index.md){ .md-button .md-button--primary }
+[See how it works](how-it-works/index.md){ .md-button }
 
-## Examples
+</div>
 
-### Admonitions
+<div class="jn-center" markdown>
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
+## One person's junk is a whole community's cloud
 
-!!! note
+</div>
 
-    This is a **note** admonition. Use it to provide helpful information.
+<div class="grid cards" markdown>
 
-!!! warning
+-   :lucide-recycle:{ .lg .middle } __Rescue a laptop__
 
-    This is a **warning** admonition. Be careful!
+    ---
 
-### Details
+    That laptop in the drawer still works — it's just slow, old, or
+    unloved. We wipe it, health-check it, and give it a new job:
+    storage node.
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+    [:lucide-arrow-right: Donate a laptop](contribute/index.md)
 
-??? info "Click to expand for more info"
-    
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
+-   :lucide-cloud:{ .lg .middle } __Get free storage__
 
-## Code Blocks
+    ---
 
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
+    Contribute a machine and you get S3-compatible object storage in
+    return. Back up your photos, host your files, keep your data in
+    your own community.
 
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
+    [:lucide-arrow-right: Use your storage](use/index.md)
 
-greet("Python")
-```
+-   :lucide-network:{ .lg .middle } __Join the mesh__
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+    ---
 
-    Code annotations allow to attach notes to lines of code.
+    Nodes connect over an encrypted [Nebula](https://github.com/slackhq/nebula)
+    mesh and pool their disks with [Garage](https://garagehq.deuxfleurs.fr/),
+    an object store built for exactly this kind of scrappy hardware.
 
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
+    [:lucide-arrow-right: The architecture](how-it-works/index.md)
 
-## Content tabs
+-   :lucide-heart-handshake:{ .lg .middle } __Own it together__
 
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
+    ---
 
-=== "Python"
+    Junk Net is free and community-owned. No venture capital, no
+    "sunsetting your plan" emails. If the community runs it, the
+    community keeps it.
 
-    ``` python
-    print("Hello from Python!")
-    ```
+    [:lucide-arrow-right: The cause](about/cause.md)
 
-=== "Rust"
+</div>
 
-    ``` rs
-    println!("Hello from Rust!");
-    ```
+## The idea in 60 seconds
 
-## Diagrams
+1.  **You donate an old laptop.** Anything reasonably modern that still
+    powers on. We securely wipe it — every byte of your old data is
+    destroyed.
 
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
+2.  **It becomes a node.** We install the Junk Net OS image. The machine
+    joins an encrypted mesh network and offers its disk to the cluster.
 
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
+3.  **The cluster pools the storage.** Garage spreads three copies of
+    every object across different machines in different homes, so no
+    single dead laptop (or house fire) loses data.
 
-## Footnotes
+4.  **You get free storage.** An S3-compatible endpoint and your own
+    access keys. Works with the tools you already know — `rclone`,
+    AWS CLI, Cyberduck, or any S3 library.
 
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
+!!! note "Why *Tank Girl*?"
 
-Here's a sentence with a footnote.[^1]
+    Because the aesthetic fits. A tank bolted together from scrap,
+    driven with attitude, that somehow works better than the shiny
+    stuff. Junk Net is infrastructure with the same energy: built from
+    what everyone else threw away, owned by nobody's shareholders.
 
-Hover it, to see a tooltip.
+## Why this matters
 
-[^1]: This is the footnote.
+<div class="grid cards" markdown>
 
+-   :lucide-leaf:{ .lg .middle } __Less e-waste__
 
-## Formatting
+    ---
 
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
+    Making a new laptop emits hundreds of kilograms of CO₂ before it's
+    ever switched on. The greenest computer is the one that already
+    exists — so let's keep it working.
 
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
+-   :lucide-piggy-bank:{ .lg .middle } __Free means free__
 
-## Icons, Emojis
+    ---
 
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
+    Cloud storage prices only ever ratchet up. Junk Net storage is free
+    for contributors, forever. The "payment" is the laptop you weren't
+    using anyway.
 
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
+-   :lucide-map-pin:{ .lg .middle } __Local & sovereign__
 
-## Maths
+    ---
 
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
+    Your data lives on machines in your own community — not in a
+    hyperscaler's data centre on another continent, subject to someone
+    else's terms of service.
 
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
+</div>
 
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
+## Starting in Brisbane :lucide-map-pin:
 
-<script id="MathJax-script" async src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-</script>
+The first Junk Net cluster is being built in **Brisbane, Australia**.
+If you're local and have a laptop to donate — or you want to host a
+node at your place — we'd love to hear from you.
 
-## Task Lists
+[Join the Brisbane pilot](contribute/brisbane.md){ .md-button .md-button--primary }
 
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
+!!! warning "Junk Net is in development"
 
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+    This project is being actively built and the pilot cluster is not
+    yet open for general use. Nothing here comes with an SLA — read
+    [Trust & safety](how-it-works/trust.md) before storing anything you
+    can't afford to lose. Follow the [roadmap](about/roadmap.md) to see
+    where things are at.

@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Junk Net — theme accents
+   A little Tank Girl attitude: scavenged, loud, but still readable.
+   Works in both light ("default") and dark ("slate") schemes.
+   ========================================================================== */
+
+:root {
+  --jn-pink: #e91e8c;      /* hot pink — the accent */
+  --jn-teal: #00bfa5;      /* acid teal — the counterpunch */
+  --jn-rust: #bf5b23;      /* rust — old metal */
+}
+
+/* --------------------------------------------------------------------------
+   Landing page hero
+   -------------------------------------------------------------------------- */
+
+.jn-hero {
+  margin: 2.5rem auto 3rem;
+  max-width: 42rem;
+  text-align: center;
+}
+
+.jn-hero .jn-kicker {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--jn-pink);
+  border-radius: 2rem;
+  color: var(--jn-pink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.jn-hero h1 {
+  margin-bottom: 0.8rem;
+  font-size: 2.4em;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--md-default-fg-color);
+}
+
+.jn-hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--jn-pink), var(--jn-rust));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.jn-hero .jn-tagline {
+  margin-bottom: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+.jn-hero .md-button {
+  margin: 0.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Centered section lead-ins on the landing page
+   -------------------------------------------------------------------------- */
+
+.jn-center {
+  text-align: center;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Small punk touches
+   -------------------------------------------------------------------------- */
+
+/* Card grid icons pick up the accent */
+.grid.cards .lg.middle {
+  color: var(--jn-pink);
+}
+
+/* Slightly bolder card titles */
+.grid.cards strong {
+  font-weight: 700;
+}

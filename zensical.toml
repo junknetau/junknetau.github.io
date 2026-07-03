@@ -17,7 +17,7 @@ site_name = "junknet"
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "An open source distributed object storage system."
+site_description = "Junk Net turns donated old laptops into a free, community-owned, S3-compatible object store. Donate a laptop, get storage. Starting in Brisbane, Australia."
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -47,10 +47,34 @@ repo_name = "junknetau/junknet"
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  { "Home" = "index.md" },
+  { "About" = [
+    { "What is Junk Net?" = "about/index.md" },
+    { "The cause" = "about/cause.md" },
+    { "FAQ" = "about/faq.md" },
+    { "Roadmap" = "about/roadmap.md" },
+  ] },
+  { "How it works" = [
+    { "Architecture" = "how-it-works/index.md" },
+    { "The storage layer" = "how-it-works/storage.md" },
+    { "The mesh layer" = "how-it-works/mesh.md" },
+    { "Trust & safety" = "how-it-works/trust.md" },
+  ] },
+  { "Contribute" = [
+    { "Donate a laptop" = "contribute/index.md" },
+    { "The Brisbane pilot" = "contribute/brisbane.md" },
+  ] },
+  { "Use it" = [
+    { "Using your storage" = "use/index.md" },
+  ] },
+  { "Run a node" = [
+    { "Running a node" = "operators/index.md" },
+    { "Garage as a Linux service" = "operators/single-node.md" },
+    { "Set up the mesh" = "operators/nebula.md" },
+    { "Cluster operations" = "operators/cluster.md" },
+  ] },
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -60,7 +84,7 @@ repo_name = "junknetau/junknet"
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-#extra_css = ["assets/stylesheets/extra.css"]
+extra_css = ["assets/stylesheets/extra.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -160,7 +184,7 @@ features = [
     # https://zensical.org/docs/authoring/content-tabs/#linked-content-tabs
     "content.tabs.link",
 
-    # TODO: not sure I understand this one? Is there a demo of this in the docs?
+    # Improved tooltips for links, abbreviations, and other elements.
     # https://zensical.org/docs/authoring/tooltips/#improved-tooltips
     "content.tooltips",
 
@@ -218,7 +242,7 @@ features = [
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.
@@ -303,8 +327,8 @@ repo = "fontawesome/brands/github-alt"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/junknetau/junknetau.github.io"
 
 
