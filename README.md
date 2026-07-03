@@ -32,6 +32,6 @@ Content lives in [`docs/`](docs/); site configuration in
 
 Laptops, host households, and curious people are all welcome — see
 [the Brisbane pilot](https://junknet.au/contribute/brisbane/) or email
-[luke@aquainnis.com](mailto:luke@aquainnis.com).
+[info@aquainnis.com](mailto:info@aquainnis.com).
 
 A community project by [Aquainnis](https://aquainnis.com).
