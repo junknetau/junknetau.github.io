@@ -45,7 +45,7 @@ The pilot needs three things, in this order:
 
 ### Get in touch
 
-- **Email:** [luke@aquainnis.com](mailto:luke@aquainnis.com)
+- **Email:** [info@aquainnis.com](mailto:info@aquainnis.com)
 - **GitHub:** open an issue on
   [junknetau/junknetau.github.io](https://github.com/junknetau/junknetau.github.io)
 
